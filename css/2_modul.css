@@ -95,12 +95,16 @@ body {
 
 /*5*/
 .book {
+    
     padding: 10px;
     margin-bottom: 10px;
     background-color: rgb(179, 173, 230);
     cursor: pointer;
 }
-
+.container-item-i{
+    
+    width: 900px;
+}
 .book.selected {
     background-color: #FFA984;
 }

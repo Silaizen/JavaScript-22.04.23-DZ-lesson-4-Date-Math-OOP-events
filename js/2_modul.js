@@ -25,62 +25,61 @@ function closeModal() {
 
 /*3 task
 document.addEventListener('DOMContentLoaded', function() {
-  var field = document.getElementById('football-field');
-  var ball = document.getElementById('ball');
+  let field = document.getElementById('football-field');
+  let ball = document.getElementById('ball');
 
   field.addEventListener('click', function(event) {
-    var fieldRect = field.getBoundingClientRect();
-    var fieldWidth = field.offsetWidth;
-    var fieldHeight = field.offsetHeight;
-    var ballWidth = ball.offsetWidth;
-    var ballHeight = ball.offsetHeight;
-    var clickX = event.clientX - fieldRect.left - ballWidth / 2;
-    var clickY = event.clientY - fieldRect.top - ballHeight / 2;
+    let fieldRect = field.getBoundingClientRect();
+    let fieldWidth = field.offsetWidth;
+    let fieldHeight = field.offsetHeight;
+    let ballWidth = ball.offsetWidth;
+    let ballHeight = ball.offsetHeight;
+    let clickX = event.clientX - fieldRect.left - ballWidth / 2;
+    let clickY = event.clientY - fieldRect.top - ballHeight / 2;
 
-    
     if (clickX < 0) clickX = 0;
     if (clickY < 0) clickY = 0;
     if (clickX + ballWidth > fieldWidth) clickX = fieldWidth - ballWidth;
     if (clickY + ballHeight > fieldHeight) clickY = fieldHeight - ballHeight;
 
-    ball.style.transform = 'translate(' + clickX + 'px, ' + clickY + 'px)';
+    ball.style.transform = `translate(${clickX}px, ${clickY}px)`;
   });
 });
 */
 
 /*4 task
-var lightIndex = 0;
-    var lights = document.getElementsByClassName('light');
+let lightIndex = 0;
+const lights = document.getElementsByClassName('light');
 
-    function changeLight() {
-      // Вимикаємо всі світлофори
-      for (var i = 0; i < lights.length; i++) {
-        lights[i].classList.remove('active');
-      }
+function changeLight() {
+  
+  for (let i = 0; i < lights.length; i++) {
+    lights[i].classList.remove('active');
+  }
 
-      // Перемикаємо наступний світлофор
-      lightIndex = (lightIndex + 1) % lights.length;
-      lights[lightIndex].classList.add('active');
-    }
-    */
-
+  
+  lightIndex = (lightIndex + 1) % lights.length;
+  lights[lightIndex].classList.add('active');
+}
+*/
+    
 /*5 task
-   var selectedBook = null;
+let selectedBook = null;
 
-   function toggleBookColor(event) {
-     var clickedBook = event.target;
-     if (selectedBook !== null) {
-       selectedBook.classList.remove('selected');
-     }
-     if (selectedBook !== clickedBook) {
-       clickedBook.classList.add('selected');
-       selectedBook = clickedBook;
-     } else {
-       selectedBook = null;
-     }
-   }
-   */
-
+function toggleBookColor(event) {
+  let clickedBook = event.target;
+  if (selectedBook !== null) {
+    selectedBook.classList.remove('selected');
+  }
+  if (selectedBook !== clickedBook) {
+    clickedBook.classList.add('selected');
+    selectedBook = clickedBook;
+  } else {
+    selectedBook = null;
+  }
+}
+*/
+   
 /*6 task
 
 const clickBtn=document.querySelector(".btn");
@@ -117,7 +116,7 @@ else{
 
 /*8 task
 function startResize(event) {
-  if (event.button === 2) { // Перевірка клавіші правої кнопки миші
+  if (event.button === 2) { 
     document.onmousemove = resize;
     document.onmouseup = stopResize;
   }
